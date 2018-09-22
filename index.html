@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MoviesDBM</title>
+	<!-- Libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular-route.min.js"></script>
+	<script src="/assets/libs/semantic.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/libs/semantic.css" />
+	
+	<!-- Application related js/css -->
+	<script src="/app.module.js"></script>
+	<script src="/app.config.js"></script>
+	<script src="/components/home/homeService.js"></script>
+	<script src="/components/home/homeController.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+</head>
+<body ng-app="movies" ng-cloak>
+	<div ng-include="'/shared/header/header.html'"></div>
+	<div ng-view></div>
+</body>
+</html>

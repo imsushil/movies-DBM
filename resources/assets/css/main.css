@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+}
+.ui .grid {
+	margin-right: 0rem;
+}
+.ui.fluid.container {
+	margin: 0 !important;
+}
+.ui.navbar {
+	color: #fff;
+}
+.ui.navbar.inverted.blue{
+	background-color: #2185d0;
+}
+
+.ui.navbar .ui.menu {
+	border: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	background-color: transparent;
+}
+.ui.navbar .ui.menu .item {
+	color: #fff;
+}
+.ui.navbar .ui.menu .item:last-child{
+	border-right: 1px solid rgba(0,0,0,0.05);
+}
+.ui.navbar .ui.menu .item:hover{
+	color: #fff !important;
+}
+.ui.grid {
+    margin-top: 0rem;
+    margin-left: 0;
+}
+#pagination {
+    position:fixed;
+    background-color: transparent;
+    width:100%; 
+    bottom: 10px;
+    left:0;
+}
+.ui.pagination.menu  {
+    box-shadow: -2px 0px 30px 2px rgba(0,0,0,0.3);
+}
+
+#filters {
+	padding: 0rem;
+	display: none;
+}
+#filters .mobile, .tablet{
+	text-align: left;
+	padding: 5px 14px;
+}
