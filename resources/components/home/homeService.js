@@ -1,7 +1,7 @@
 angular.module("movies").service("HomeService", ["$http", "$q", function($http, $q) {
 	this.getMoviesList = function() {
 		var deferred = $q.defer();
-		var promise = $http.get("https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-487115420001/movielisting.json").then(function(response) {
+		var promise = $http.get("http://cors.io/?https://s3-us-west-2.amazonaws.com/elasticbeanstalk-us-west-2-487115420001/movielisting.json").then(function(response) {
 			return response.data;
 		}, function(response) {
 			deferred.reject("Location=HomeService, msg=Some error occurred while fetching movie details!");
