@@ -1,7 +1,7 @@
-angular.module("movies").service("HomeService", ["$http", "$q", "$location", function($http, $q, $location) {
+angular.module("movies").service("HomeService", ["$http", "$q", function($http, $q) {
 	this.getMoviesList = function() {
 		var deferred = $q.defer();
-		var promise = $http.get($location.path() + "resources/assets/movieslisting.json").then(function(response) {
+		var promise = $http.get("/resources/assets/movieslisting.json").then(function(response) {
 			return response.data;
 		}, function(response) {
 			deferred.reject("Location=HomeService, msg=Some error occurred while fetching movie details!");
