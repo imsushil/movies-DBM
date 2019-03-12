@@ -67,10 +67,15 @@ function HomeController(HomeService, $q, $timeout, $scope) {
         $q.all(promises).then(function(data) {
             for(i = 0; i < data.length; ++i) {
                 if(!list[start+i].hasOwnProperty("image")){
-                    list[start+i].image = data[i].Poster;    
+		    if(!angular.isUndefined(data[i])) {
+			list[start+i].image = data[i].Poster;
+		    }    
                 }
-                if(!list[start+i].hasOwnProperty("plot"))
-                    list[start+i].plot = data[i].Plot;
+                if(!list[start+i].hasOwnProperty("plot")) {
+		    if(!angular.isUndefined(data[i])) {
+			list[start+i].plot = data[i].Plot;	
+		    }
+		}
             }
         });
     }
