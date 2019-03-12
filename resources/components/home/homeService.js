@@ -10,7 +10,7 @@ angular.module("movies").service("HomeService", ["$http", "$q", function($http, 
 	}
     
     this.getMoviePosters = function(moveId) {
-        var promise = $http.get("http://www.omdbapi.com/?i="+moveId+"&apikey=7142c665").then(function(response) {
+        var promise = $http.get("http://www.omdbapi.com/?i="+moveId+"&apikey=b28e58db").then(function(response) {
 			return response.data;
 		}, function(response) {
 			console.log("Some error occurred while fetching movie posters!");
